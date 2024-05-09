@@ -2,8 +2,9 @@ import FeaturedProducts from "./_components/FeaturedProducts";
 import Footer from "./_components/Footer";
 import Hero from "./_components/Hero";
 import Menu from "./_components/Menu";
-import Navbar from "./_components/Navbar";
+import ExNavbar from "./_components/exNavbar";
 import WeAre from "./_components/WeAre";
+import { Navbar } from "@/components/component/Navbar";
 
 const getHomePageContent = async () => {
   const version = process.env.SB_DATA_VERSION;
@@ -25,7 +26,8 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar content={storyData.nav_section} />
+      <Navbar />
+      <ExNavbar content={storyData.nav_section} />
       <Hero />
       <FeaturedProducts />
       <Menu />
