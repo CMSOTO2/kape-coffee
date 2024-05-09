@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function WeAre() {
-    return (
-        <div>WeAre</div>
-    )
+  return <div>WeAre</div>;
 }

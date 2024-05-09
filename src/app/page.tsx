@@ -1,9 +1,9 @@
-import FeaturedProducts from './_components/FeaturedProducts';
-import Footer from './_components/Footer';
-import Hero from './_components/Hero';
-import Menu from './_components/Menu';
-import Navbar from './_components/Navbar';
-import WeAre from './_components/WeAre';
+import FeaturedProducts from "./_components/FeaturedProducts";
+import Footer from "./_components/Footer";
+import Hero from "./_components/Hero";
+import Menu from "./_components/Menu";
+import Navbar from "./_components/Navbar";
+import WeAre from "./_components/WeAre";
 
 const getHomePageContent = async () => {
   const version = process.env.SB_DATA_VERSION;
@@ -16,9 +16,9 @@ const getHomePageContent = async () => {
   const { nav_section } = storyData.story.content;
 
   return {
-    nav_section: nav_section[0]
-  }
-}
+    nav_section: nav_section[0],
+  };
+};
 
 export default async function Home() {
   const storyData = await getHomePageContent();
