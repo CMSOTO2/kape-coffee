@@ -2,7 +2,6 @@ import FeaturedProducts from "./_components/FeaturedProducts";
 import Footer from "./_components/Footer";
 import Hero from "./_components/Hero";
 import Menu from "./_components/Menu";
-import ExNavbar from "./_components/exNavbar";
 import WeAre from "./_components/WeAre";
 import { Navbar } from "@/components/component/Navbar";
 
@@ -27,7 +26,6 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <ExNavbar content={storyData.nav_section} />
       <Hero />
       <FeaturedProducts />
       <Menu />

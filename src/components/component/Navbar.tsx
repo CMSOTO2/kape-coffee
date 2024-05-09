@@ -30,183 +30,152 @@ import {
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
 export function Navbar() {
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ];
+
   return (
-    <header className="flex items-center justify-between bg-white px-4 py-3 md:px-6 md:py-4">
-      <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
-        <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">Acme Inc</span>
-      </Link>
-      <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+    <header className=" bg-white px-4">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between py-3 md:px-6 md:py-4">
         <Link
-          className="text-gray-500 transition-colors hover:text-gray-900"
+          className="flex items-center gap-2 text-lg font-semibold"
           href="#"
         >
-          Home
+          <MountainIcon className="h-6 w-6" />
+          <span className="sr-only">Acme Inc</span>
         </Link>
-        <Link
-          className="text-gray-500 transition-colors hover:text-gray-900"
-          href="#"
-        >
-          Features
-        </Link>
-        <Link
-          className="text-gray-500 transition-colors hover:text-gray-900"
-          href="#"
-        >
-          Pricing
-        </Link>
-        <Link
-          className="text-gray-500 transition-colors hover:text-gray-900"
-          href="#"
-        >
-          About
-        </Link>
-        <Link
-          className="text-gray-500 transition-colors hover:text-gray-900"
-          href="#"
-        >
-          Contact
-        </Link>
-      </nav>
-      <div className="flex items-center gap-4">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button className="relative" size="icon" variant="outline">
-              <ShoppingCartIcon className="h-6 w-6" />
-              <Badge className="absolute -right-2 -top-2 h-5 w-5 rounded-full bg-black text-white">
-                3
-              </Badge>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-80">
-            <DropdownMenuLabel>Shopping Cart</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <div className="max-h-[300px] overflow-y-auto">
-              <div className="grid gap-4 p-4">
-                <div className="flex items-center gap-4">
-                  <img
-                    alt="Product Image"
-                    className="rounded-md"
-                    height={64}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "64/64",
-                      objectFit: "cover",
-                    }}
-                    width={64}
-                  />
-                  <div className="flex-1">
-                    <h4 className="font-medium">Product Name</h4>
-                    <p className="text-sm text-gray-500">$19.99</p>
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+          {navLinks.map((navLink) => {
+            return (
+              <Link
+                key={navLink.label}
+                className="text-gray-500 transition-colors hover:text-gray-900"
+                href={navLink.href}
+              >
+                {navLink.label}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className="flex items-center gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="relative" size="icon" variant="outline">
+                <ShoppingCartIcon className="h-6 w-6" />
+                <Badge className="absolute -right-2 -top-2 h-5 w-5 rounded-full bg-black text-white">
+                  3
+                </Badge>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-80">
+              <DropdownMenuLabel>Shopping Cart</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <div className="max-h-[300px] overflow-y-auto">
+                <div className="grid gap-4 p-4">
+                  <div className="flex items-center gap-4">
+                    <img
+                      alt="Product Image"
+                      className="rounded-md"
+                      height={64}
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: "64/64",
+                        objectFit: "cover",
+                      }}
+                      width={64}
+                    />
+                    <div className="flex-1">
+                      <h4 className="font-medium">Product Name</h4>
+                      <p className="text-sm text-gray-500">$19.99</p>
+                    </div>
+                    <Button size="icon" variant="ghost">
+                      <XIcon className="h-4 w-4" />
+                    </Button>
                   </div>
-                  <Button size="icon" variant="ghost">
-                    <XIcon className="h-4 w-4" />
-                  </Button>
-                </div>
-                <div className="flex items-center gap-4">
-                  <img
-                    alt="Product Image"
-                    className="rounded-md"
-                    height={64}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "64/64",
-                      objectFit: "cover",
-                    }}
-                    width={64}
-                  />
-                  <div className="flex-1">
-                    <h4 className="font-medium">Another Product</h4>
-                    <p className="text-sm text-gray-500">$29.99</p>
+                  <div className="flex items-center gap-4">
+                    <img
+                      alt="Product Image"
+                      className="rounded-md"
+                      height={64}
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: "64/64",
+                        objectFit: "cover",
+                      }}
+                      width={64}
+                    />
+                    <div className="flex-1">
+                      <h4 className="font-medium">Another Product</h4>
+                      <p className="text-sm text-gray-500">$29.99</p>
+                    </div>
+                    <Button size="icon" variant="ghost">
+                      <XIcon className="h-4 w-4" />
+                    </Button>
                   </div>
-                  <Button size="icon" variant="ghost">
-                    <XIcon className="h-4 w-4" />
-                  </Button>
-                </div>
-                <div className="flex items-center gap-4">
-                  <img
-                    alt="Product Image"
-                    className="rounded-md"
-                    height={64}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "64/64",
-                      objectFit: "cover",
-                    }}
-                    width={64}
-                  />
-                  <div className="flex-1">
-                    <h4 className="font-medium">Yet Another Product</h4>
-                    <p className="text-sm text-gray-500">$14.99</p>
+                  <div className="flex items-center gap-4">
+                    <img
+                      alt="Product Image"
+                      className="rounded-md"
+                      height={64}
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: "64/64",
+                        objectFit: "cover",
+                      }}
+                      width={64}
+                    />
+                    <div className="flex-1">
+                      <h4 className="font-medium">Yet Another Product</h4>
+                      <p className="text-sm text-gray-500">$14.99</p>
+                    </div>
+                    <Button size="icon" variant="ghost">
+                      <XIcon className="h-4 w-4" />
+                    </Button>
                   </div>
-                  <Button size="icon" variant="ghost">
-                    <XIcon className="h-4 w-4" />
-                  </Button>
                 </div>
               </div>
-            </div>
-            <DropdownMenuSeparator />
-            <div className="px-4 py-2">
-              <div className="flex items-center justify-between">
-                <span>Total:</span>
-                <span className="font-medium">$64.97</span>
+              <DropdownMenuSeparator />
+              <div className="px-4 py-2">
+                <div className="flex items-center justify-between">
+                  <span>Total:</span>
+                  <span className="font-medium">$64.97</span>
+                </div>
+                <div className="mt-4 flex gap-2">
+                  <Button className="flex-1" variant="outline">
+                    View Cart
+                  </Button>
+                  <Button className="flex-1">Checkout</Button>
+                </div>
               </div>
-              <div className="mt-4 flex gap-2">
-                <Button className="flex-1" variant="outline">
-                  View Cart
-                </Button>
-                <Button className="flex-1">Checkout</Button>
-              </div>
-            </div>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button className="md:hidden" size="icon" variant="outline">
-              <MenuIcon className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <div className="grid gap-4 px-4 py-6">
-              <Link
-                className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                href="#"
-              >
-                Home
-                <ChevronRightIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                href="#"
-              >
-                Features
-                <ChevronRightIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                href="#"
-              >
-                Pricing
-                <ChevronRightIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                href="#"
-              >
-                About
-                <ChevronRightIcon className="h-5 w-5" />
-              </Link>
-              <Link
-                className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                href="#"
-              >
-                Contact
-                <ChevronRightIcon className="h-5 w-5" />
-              </Link>
-            </div>
-          </SheetContent>
-        </Sheet>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button className="md:hidden" size="icon" variant="outline">
+                <MenuIcon className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <nav className="grid gap-4 px-4 py-6">
+                {navLinks.map((navLink) => {
+                  return (
+                    <Link
+                      key={navLink.label}
+                      className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
+                      href={navLink.href}
+                    >
+                      {navLink.label}
+                      <ChevronRightIcon className="h-5 w-5" />
+                    </Link>
+                  );
+                })}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
