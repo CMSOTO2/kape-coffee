@@ -25,12 +25,10 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar />
       <Hero />
       <FeaturedProducts />
       <Menu />
       <WeAre />
-      <Footer />
     </>
   );
 }
