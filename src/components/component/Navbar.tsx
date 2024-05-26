@@ -38,8 +38,8 @@ export function Navbar() {
           className="flex items-center gap-2 text-lg font-semibold"
           href="#"
         >
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <MountainIcon className="h-6 w-6" /> {/*TODO: Change to Kape Logo */}
+          <span className="sr-only">Kape</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((navLink) => {
