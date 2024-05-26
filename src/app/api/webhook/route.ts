@@ -21,6 +21,30 @@ export async function POST(req: NextRequest) {
     // charge.succeeded
     // payment_intent.succeeded
     // payment_intent.created
+    // case 'charge.failed':
+    //   const chargeFailed = event.data.object;
+    //   // Then define and call a function to handle the event charge.failed
+    //   break;
+    // case 'charge.pending':
+    //   const chargePending = event.data.object;
+    //   // Then define and call a function to handle the event charge.pending
+    //   break;
+    // case 'charge.refunded':
+    //   const chargeRefunded = event.data.object;
+    //   // Then define and call a function to handle the event charge.refunded
+    //   break;
+    // case 'charge.succeeded':
+    //   const chargeSucceeded = event.data.object;
+    //   // Then define and call a function to handle the event charge.succeeded
+    //   break;
+    // case 'payment_intent.created':
+    //   const paymentIntentCreated = event.data.object;
+    //   // Then define and call a function to handle the event payment_intent.created
+    //   break;
+    // case 'payment_intent.succeeded':
+    //   const paymentIntentSucceeded = event.data.object;
+    //   // Then define and call a function to handle the event payment_intent.succeeded
+    //   break;
 
     // TODO: Create function here that sends all needed user data to store in DB
 
