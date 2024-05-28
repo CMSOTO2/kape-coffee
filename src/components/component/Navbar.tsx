@@ -18,16 +18,17 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-  DropdownMenuTrigger,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuContent,
-  DropdownMenu,
-} from "@/components/ui/dropdown-menu";
-import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
+  SheetTrigger,
+  SheetContent,
+  Sheet,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+  SheetFooter,
+  SheetClose,
+} from "@/components/ui/sheet";
 import { navLinks } from "@/lib/constants";
 
 export function Navbar() {
@@ -55,119 +56,30 @@ export function Navbar() {
           })}
         </nav>
         <div className="flex items-center gap-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="relative" size="icon" variant="outline">
-                <ShoppingCartIcon className="h-6 w-6" />
-                <Badge className="absolute -right-2 -top-2 h-5 w-5 rounded-full bg-black text-white">
-                  3
-                </Badge>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-80">
-              <DropdownMenuLabel>Shopping Cart</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <div className="max-h-[300px] overflow-y-auto">
-                <div className="grid gap-4 p-4">
-                  <div className="flex items-center gap-4">
-                    <img
-                      alt="Product Image"
-                      className="rounded-md"
-                      height={64}
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: "64/64",
-                        objectFit: "cover",
-                      }}
-                      width={64}
-                    />
-                    <div className="flex-1">
-                      <h4 className="font-medium">Product Name</h4>
-                      <p className="text-sm text-gray-500">$19.99</p>
-                    </div>
-                    <Button size="icon" variant="ghost">
-                      <XIcon className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      alt="Product Image"
-                      className="rounded-md"
-                      height={64}
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: "64/64",
-                        objectFit: "cover",
-                      }}
-                      width={64}
-                    />
-                    <div className="flex-1">
-                      <h4 className="font-medium">Another Product</h4>
-                      <p className="text-sm text-gray-500">$29.99</p>
-                    </div>
-                    <Button size="icon" variant="ghost">
-                      <XIcon className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      alt="Product Image"
-                      className="rounded-md"
-                      height={64}
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: "64/64",
-                        objectFit: "cover",
-                      }}
-                      width={64}
-                    />
-                    <div className="flex-1">
-                      <h4 className="font-medium">Yet Another Product</h4>
-                      <p className="text-sm text-gray-500">$14.99</p>
-                    </div>
-                    <Button size="icon" variant="ghost">
-                      <XIcon className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-              <DropdownMenuSeparator />
-              <div className="px-4 py-2">
-                <div className="flex items-center justify-between">
-                  <span>Total:</span>
-                  <span className="font-medium">$64.97</span>
-                </div>
-                <div className="mt-4 flex gap-2">
-                  <Button className="flex-1" variant="outline">
-                    View Cart
-                  </Button>
-                  <Button className="flex-1">Checkout</Button>
-                </div>
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="md:hidden" size="icon" variant="outline">
-                <MenuIcon className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
+              <Button variant="ghost">
+                <ShoppingCartIcon className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="grid gap-4 px-4 py-6">
-                {navLinks.map((navLink) => {
-                  return (
-                    <Link
-                      key={navLink.label}
-                      className="flex items-center justify-between text-sm font-medium underline-offset-4 hover:underline"
-                      href={navLink.href}
-                    >
-                      {navLink.label}
-                      <ChevronRightIcon className="h-5 w-5" />
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Your Cart</SheetTitle>
+                <SheetDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </SheetDescription>
+              </SheetHeader>
+              <div className="grid gap-4 py-4"></div>
+              <SheetFooter>
+                <SheetClose asChild>
+                  <Button type="button" className="w-full" hidden>
+                    <Link href="/checkout" className="h-full w-full">
+                      Checkout
                     </Link>
-                  );
-                })}
-              </nav>
+                  </Button>
+                </SheetClose>
+              </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>
