@@ -34,7 +34,7 @@ import { navLinks } from "@/lib/constants";
 export function Navbar() {
   return (
     <header className=" bg-white px-4">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between py-3 md:px-6 md:py-4">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between py-3 md:px-6 md:py-4">
         <Link
           className="flex items-center gap-2 text-lg font-semibold"
           href="#"

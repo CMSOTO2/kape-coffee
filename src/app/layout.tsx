@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/component/Navbar";
 import Footer from "./_components/Footer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ReactQueryClientProvider from "./_components/ReactQueryClientProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home | Kape",
@@ -22,7 +21,7 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
       <html lang="en">
-        <body className={`${inter.className} bg-kape-black`}>
+        <body className={`${montserrat.className} scroll-smooth bg-kape-black`}>
           <Navbar />
           {children}
           <Footer />

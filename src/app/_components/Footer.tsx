@@ -4,7 +4,7 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-kape-black px-3 font-bold text-white">
-      <div className="mx-auto flex max-w-[1200px] flex-col">
+      <div className="mx-auto flex max-w-[1440px] flex-col">
         <div className="py-12 md:flex md:justify-between md:pb-0">
           {/* Brand Container */}
           <div className="mb-12 flex flex-col items-center">
