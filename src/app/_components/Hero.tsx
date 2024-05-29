@@ -1,44 +1,29 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
-
-interface ProductsType {
-  id: string;
-  active: boolean;
-  name: string;
-  description: string;
-  images: string[];
-  price: number;
-  currency: "usd";
-}
+import { SkeletonCard } from "@/components/ui/skeleton-card";
+import { useProducts } from "../hooks/useProducts";
 
 export default function Hero() {
-  const { isLoading, isError, data } = useQuery({
-    queryKey: ["product-list"],
-    queryFn: () => fetch("/api/products"),
-    enabled: true,
-  });
+  const { isLoading, isError, data } = useProducts();
 
   if (isLoading) {
-    return "...loading";
+    return <SkeletonCard />;
   }
   if (isError) {
-    return "error";
+    return <div className="text-white">error</div>;
   }
   return (
-    <div className="min-h-screen text-white">
-      {data?.data?.map((product: ProductsType) => {
-        return <div>{product.name}</div>;
+    <div className="text-white">
+      {data?.map((product) => {
+        return (
+          <div key={product.id}>
+            <h1 className="text-4xl">{product.name}</h1>
+            <h2>price ${(product.price / 100).toFixed(2)}</h2>
+            <img src={product.images[0]} alt={product.description} />
+          </div>
+        );
       })}
-      <button>
-        <a
-          href="https://buy.stripe.com/test_4gwdR06529myd209AA"
-          target="_blank"
-        >
-          Coffee Beans
-        </a>
-      </button>
     </div>
   );
 }
