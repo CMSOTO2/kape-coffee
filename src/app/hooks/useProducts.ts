@@ -13,7 +13,7 @@ interface ProductsType {
 export const useProducts = (): UseQueryResult<ProductsType[]> => {
   return useQuery({
     queryKey: ["product-list"],
-    queryFn: () => fetch("/api/products").then((res) => res.json()),
+    queryFn: async () => await fetch("/api/products").then((res) => res.json()),
     enabled: true,
   });
 };
