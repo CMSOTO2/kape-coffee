@@ -1,5 +1,5 @@
+import { stripe } from "@/lib/constants";
 import { NextResponse } from "next/server";
-import { stripe } from "../webhook/route";
 
 export const GET = async (req: Request, res: Response) => {
   try {
