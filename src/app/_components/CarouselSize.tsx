@@ -21,11 +21,14 @@ export function CarouselSize() {
         opts={{
           align: "start",
         }}
-        className="w-full"
+        className="w-full px-3"
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem
+              key={index}
+              className="min-w-[350px] max-w-[450px] sm:basis-1/2 lg:basis-1/3"
+            >
               <div className="p-1">
                 <SkeletonCard />
               </div>
@@ -43,13 +46,13 @@ export function CarouselSize() {
       opts={{
         align: "start",
       }}
-      className="w-full"
+      className="w-full px-3"
     >
       <CarouselContent>
         {data?.map((product) => (
           <CarouselItem
             key={product.id}
-            className="min-w-[350px] max-w-[450px] flex-grow bg-kape-gray sm:basis-1/2 lg:basis-1/3"
+            className="min-w-[350px] max-w-[450px] bg-kape-gray sm:basis-1/2 lg:basis-1/3"
           >
             <Card className="h-full">
               <CardContent className="relative flex flex-col items-center justify-center">
