@@ -20,8 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <ReactQueryClientProvider>
-      <html lang="en">
-        <body className={`${montserrat.className} scroll-smooth bg-kape-black`}>
+      <html lang="en" className="bg-kape-black">
+        <body
+          className={`${montserrat.className} scroll-smooth bg-white transition-all`}
+        >
           <Navbar />
           {children}
           <Footer />

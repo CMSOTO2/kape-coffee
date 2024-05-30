@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function WeAre() {
-  return <div>WeAre</div>;
+  return <div className="bg-white">WeAre</div>;
 }

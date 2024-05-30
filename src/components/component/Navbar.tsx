@@ -33,13 +33,14 @@ import { navLinks } from "@/lib/constants";
 
 export function Navbar() {
   return (
-    <header className=" bg-white px-4">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between py-3 md:px-6 md:py-4">
+    <header className="bg-white">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between py-4 md:px-6 md:py-4">
         <Link
           className="flex items-center gap-2 text-lg font-semibold"
           href="#"
         >
-          <MountainIcon className="h-6 w-6" /> {/*TODO: Change to Kape Logo */}
+          <MountainIcon className="mx-4 h-6 w-6" />{" "}
+          {/*TODO: Change to Kape Logo */}
           <span className="sr-only">Kape</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">

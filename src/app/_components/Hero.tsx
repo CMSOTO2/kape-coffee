@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative flex w-full items-center justify-center">
+    <section className="relative flex w-full items-center justify-center ">
       <div className="flex aspect-video h-full w-full items-center justify-center bg-black opacity-70">
         <h1 className="absolute z-10 text-center text-7xl font-medium text-blue-600">
           Modern Coffee.
