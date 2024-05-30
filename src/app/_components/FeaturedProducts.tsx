@@ -1,36 +1,12 @@
-"use client";
-
-import { SkeletonCard } from "@/components/ui/skeleton-card";
-import Image from "next/image";
 import React from "react";
-import { useProducts } from "../hooks/useProducts";
+import { CarouselSize } from "./CarouselSize";
 
 export default function FeaturedProducts() {
-  const { isLoading, isError, data } = useProducts();
-
-  if (isLoading) {
-    return <SkeletonCard />;
-  }
-  if (isError) {
-    return <div className="text-white">error</div>;
-  }
   return (
-    <section>
-      <div className="text-blue-300">
-        {data?.map((product) => {
-          return (
-            <div key={product.id}>
-              <h1 className="text-4xl">{product.name}</h1>
-              <h2>price ${(product.price / 100).toFixed(2)}</h2>
-              <Image
-                src={product.images[0]}
-                alt={product.description}
-                width={100}
-                height={100}
-              />
-            </div>
-          );
-        })}
+    <section className="bg-kape-gray py-4">
+      <div className="m-auto max-w-[1440px] text-blue-300">
+        <h2 className="mb-4 text-center text-5xl">Featured Products</h2>
+        <CarouselSize />
       </div>
     </section>
   );

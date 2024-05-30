@@ -25,16 +25,16 @@ export default function Footer() {
               {/* Links Container */}
               <ul className="mb-12 flex flex-col items-center gap-8 whitespace-nowrap text-base md:flex-row">
                 {/* Todo add link hrefs */}
-                <li className="md:hover:scale-110 md:hover:text-kape-orange">
+                <li className="md:hover:scale-110">
                   <a href="#">Home</a>
                 </li>
-                <li className="md:hover:scale-110 md:hover:text-kape-orange">
+                <li className="md:hover:scale-110">
                   <a href="#">About Us</a>
                 </li>
-                <li className="md:hover:scale-110 md:hover:text-kape-orange">
+                <li className="md:hover:scale-110">
                   <a href="#">Contact Us</a>
                 </li>
-                <li className="md:hover:scale-110 md:hover:text-kape-orange">
+                <li className="md:hover:scale-110">
                   <a href="#">Our Story</a>
                 </li>
               </ul>
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
             {/* Locations Container */}
             <div className="flex flex-col items-center gap-8 text-lg md:flex-row md:gap-16">
-              <div className="md:hover:scale-110 md:hover:text-kape-orange">
+              <div className="md:hover:scale-110">
                 <a
                   href="https://maps.app.goo.gl/e4L15S1j2aeWHxhS7"
                   className="flex items-center justify-center"
@@ -84,7 +84,7 @@ export default function Footer() {
                   </span>
                 </a>
               </div>
-              <div className="md:hover:scale-110 md:hover:text-kape-orange">
+              <div className="md:hover:scale-110">
                 <a
                   href="https://maps.app.goo.gl/bbg3J73qGFx3Gh697"
                   className="flex justify-center md:justify-start"
