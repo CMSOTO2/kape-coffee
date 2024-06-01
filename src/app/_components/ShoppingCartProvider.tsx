@@ -5,14 +5,18 @@ import { CartProvider } from "use-shopping-cart";
 
 const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
   const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string;
+  const isDevelopment = process.env.NODE_ENV === "development";
+  const basePath = isDevelopment
+    ? "http://localhost:3000"
+    : "https://kape-coffee.vercel.app";
 
   return (
     <CartProvider
       mode="payment"
       cartMode="client-only"
       stripe={stripeKey}
-      successUrl="http://localhost:3000/checkout/success"
-      cancelUrl="http://localhost:3000/checkout/error"
+      successUrl={`${basePath}/checkout/success`}
+      cancelUrl={`${basePath}/checkout/error`}
       currency="USD"
       billingAddressCollection={true}
       shouldPersist
