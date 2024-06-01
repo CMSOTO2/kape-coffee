@@ -11,10 +11,10 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
       mode="payment"
       cartMode="client-only"
       stripe={stripeKey}
-      successUrl="https://localhost:3000/success"
-      cancelUrl="https://localhost:3000/error"
+      successUrl="http://localhost:3000/checkout/success"
+      cancelUrl="http://localhost:3000/checkout/error"
       currency="USD"
-      billingAddressCollection
+      billingAddressCollection={true}
       shouldPersist
       language="en-US"
     >
