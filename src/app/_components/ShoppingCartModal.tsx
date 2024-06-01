@@ -26,7 +26,7 @@ const ShoppingCartModal = () => {
     event?.preventDefault();
 
     try {
-      const result = await redirectToCheckout("prod_QB7F1roBAEgk7r");
+      const result = await redirectToCheckout();
       if (result?.error) {
         console.log("result");
       }
