@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/component/Navbar";
 import Footer from "./_components/Footer";
 import ReactQueryClientProvider from "./_components/ReactQueryClientProvider";
+import ShoppingCartProvider from "./_components/ShoppingCartProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,16 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactQueryClientProvider>
-      <html lang="en" className="bg-kape-black">
-        <body
-          className={`${montserrat.className} scroll-smooth bg-white transition-all`}
-        >
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </ReactQueryClientProvider>
+    <ShoppingCartProvider>
+      <ReactQueryClientProvider>
+        <html lang="en" className="bg-kape-black">
+          <body
+            className={`${montserrat.className} scroll-smooth bg-white transition-all`}
+          >
+            <Navbar />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </ReactQueryClientProvider>
+    </ShoppingCartProvider>
   );
 }

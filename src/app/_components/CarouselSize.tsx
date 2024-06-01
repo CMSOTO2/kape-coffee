@@ -10,7 +10,7 @@ import {
 import { useProducts } from "../hooks/useProducts";
 import { SkeletonCard } from "@/components/ui/skeleton-card";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import AddToCartButton from "./AddToCartButton";
 
 export function CarouselSize() {
   const { isLoading, isError, data } = useProducts();
@@ -75,9 +75,14 @@ export function CarouselSize() {
                   <p className="text-[2rem] font-bold">
                     ${(product.price / 100).toFixed(2)}
                   </p>
-                  <Button className="w-full self-end bg-kape-green">
-                    Buy Now
-                  </Button>
+                  <AddToCartButton
+                    currency="USD"
+                    description={product.description}
+                    price={product.price}
+                    name={product.name}
+                    image={product.images[0]}
+                    id={product.id}
+                  />
                 </div>
               </CardContent>
             </Card>

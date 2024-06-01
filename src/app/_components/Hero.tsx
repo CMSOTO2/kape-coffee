@@ -11,7 +11,7 @@ export default function Hero() {
           src="/coffee-beans-flying.mp4"
           autoPlay
           loop
-          muted
+          muted={true}
           className="h-full w-full object-cover"
           aria-label="Coffee beans flying"
         />
