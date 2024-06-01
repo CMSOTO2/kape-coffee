@@ -15,7 +15,7 @@ const CheckoutError = () => {
           <h1 className="text-2xl font-semibold text-gray-900 md:text-4xl">
             Payment Cancelled!
           </h1>
-          <p>Don't worry, Your items are still in your cart.</p>
+          <p>Don&apos;t worry, Your items are still in your cart.</p>
 
           <div className="mt-5 flex flex-col items-center justify-center gap-4 md:flex-row">
             <Button variant="secondary" asChild>
