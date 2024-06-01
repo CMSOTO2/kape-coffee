@@ -11,9 +11,11 @@ import { useProducts } from "../hooks/useProducts";
 import { SkeletonCard } from "@/components/ui/skeleton-card";
 import Image from "next/image";
 import AddToCartButton from "./AddToCartButton";
+import { useShoppingCart } from "use-shopping-cart";
 
 export function CarouselSize() {
   const { isLoading, isError, data } = useProducts();
+  const { checkoutSingleItem } = useShoppingCart();
 
   if (isLoading) {
     return (
@@ -49,7 +51,7 @@ export function CarouselSize() {
       className="w-full px-3"
     >
       <CarouselContent>
-        {data?.map((product) => (
+        {data?.map((product: any) => (
           <CarouselItem
             key={product.id}
             className="min-w-[350px] max-w-[450px] bg-kape-gray sm:basis-1/2 lg:basis-1/3"
@@ -78,11 +80,17 @@ export function CarouselSize() {
                   <AddToCartButton
                     currency="USD"
                     description={product.description}
-                    price={product.price}
                     name={product.name}
                     image={product.images[0]}
-                    id={product.id}
+                    price={product.price}
+                    // default_price is priceAPI needed to get to checkout
+                    id={product.default_price}
                   />
+                  <button
+                    onClick={() => checkoutSingleItem(product.default_price)}
+                  >
+                    Buy now
+                  </button>
                 </div>
               </CardContent>
             </Card>

@@ -18,7 +18,7 @@ const ShoppingCartModal = () => {
     handleCartClick,
     cartDetails,
     removeItem,
-    totalPrice,
+    formattedTotalPrice,
     redirectToCheckout,
   } = useShoppingCart();
 
@@ -61,9 +61,7 @@ const ShoppingCartModal = () => {
                       <div>
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <h4>{entry.name}</h4>
-                          <p className="ml-4">
-                            ${(entry.price / 100).toFixed(2)}
-                          </p>
+                          <p className="ml-4">{entry.formattedValue}</p>
                         </div>
                         <p className="mt-1 line-clamp-2 text-sm text-gray-500">
                           {entry.description}
@@ -89,7 +87,7 @@ const ShoppingCartModal = () => {
             <div className="self-end border-t border-gray-200 px-4 py-6 sm:px-6">
               <div className="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal:</p>
-                <p>${((totalPrice as number) / 100).toFixed(2)}</p>
+                <p>{formattedTotalPrice}</p>
               </div>
               <p className="mt-0.5 text-sm text-gray-500">
                 Shipping and taxes are calculated at checkout.
