@@ -10,10 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         "kape-green": "#4B6258",
-        "kape-beige": "#E1C699",
+        "kape-beige": "#FCF7E6",
         "kape-black": "#0A0A0A",
         "kape-gray": "#242424",
-        "kape-orange": "#F4A259"
+        "kape-orange": "#F4A259",
       },
     },
   },
