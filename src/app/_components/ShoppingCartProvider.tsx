@@ -4,13 +4,15 @@ import React, { ReactNode } from "react";
 import { CartProvider } from "use-shopping-cart";
 
 const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
+  const stripeKey = process.env.STRIPE_PUBLISHABLE_KEY as string;
+
   return (
     <CartProvider
       mode="payment"
       cartMode="client-only"
-      stripe={process.env.STRIPE_SECRET_KEY as string}
-      successUrl="http://localhost:3000/success"
-      cancelUrl="http://localhost:3000/error"
+      stripe={stripeKey}
+      successUrl="https://localhost:3000/success"
+      cancelUrl="https://localhost:3000/error"
       currency="USD"
       billingAddressCollection
       shouldPersist

@@ -19,7 +19,21 @@ const ShoppingCartModal = () => {
     cartDetails,
     removeItem,
     totalPrice,
+    redirectToCheckout,
   } = useShoppingCart();
+
+  const handleCheckoutClick = async (event: any) => {
+    event?.preventDefault();
+
+    try {
+      const result = await redirectToCheckout("prod_QB7F1roBAEgk7r");
+      if (result?.error) {
+        console.log("result");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="flex items-center gap-4">
@@ -81,7 +95,9 @@ const ShoppingCartModal = () => {
                 Shipping and taxes are calculated at checkout.
               </p>
               <div className="mt-6">
-                <Button className="w-full">Checkout</Button>
+                <Button className="w-full" onClick={handleCheckoutClick}>
+                  Checkout
+                </Button>
               </div>
               <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                 <p>
