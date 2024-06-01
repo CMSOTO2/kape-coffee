@@ -1,21 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { navLinks } from "@/lib/constants";
+import { navLinks, routes } from "@/lib/constants";
 import KapeLogo from "@/app/_components/KapeLogo";
 import { Button } from "../ui/button";
 import { useShoppingCart } from "use-shopping-cart";
 import ShoppingCartModal from "@/app/_components/ShoppingCartModal";
+import { ShoppingBag } from "lucide-react";
 
 export function Navbar() {
-  const { handleCartClick } = useShoppingCart();
+  const { handleCartClick, cartCount } = useShoppingCart();
 
   return (
-    <header className="sticky left-0 top-0 z-50 bg-kape-beige">
+    <header className="sticky left-0 top-0 z-50 bg-kape-beige px-4">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between py-4 md:px-6 md:py-4">
         <Link
           className="flex items-center gap-2 text-lg font-semibold"
-          href="#"
+          href={routes.HOME}
         >
           <KapeLogo width="70" height="60" />
           <span className="sr-only">Kape</span>
@@ -33,8 +34,13 @@ export function Navbar() {
             );
           })}
         </nav>
-        <Button onClick={() => handleCartClick()} variant="ghost">
-          <ShoppingCartIcon />
+        <Button
+          onClick={() => handleCartClick()}
+          variant="ghost"
+          className="p-0"
+        >
+          <span>{cartCount}</span>
+          <ShoppingBag />
         </Button>
         <div className="hidden">
           <ShoppingCartModal />

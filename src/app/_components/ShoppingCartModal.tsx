@@ -40,7 +40,7 @@ const ShoppingCartModal = () => {
       <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Your Cart</SheetTitle>
+            <SheetTitle>Your Cart ({cartCount})</SheetTitle>
           </SheetHeader>
           <div className="grid gap-4 divide-y py-4">
             {cartCount === 0 ? (

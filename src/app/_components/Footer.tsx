@@ -1,4 +1,6 @@
+import { routes } from "@/lib/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -26,28 +28,28 @@ export default function Footer() {
               <ul className="mb-12 flex flex-col items-center gap-8 whitespace-nowrap text-base md:flex-row">
                 {/* Todo add link hrefs */}
                 <li className="md:hover:scale-110">
-                  <a href="#">Home</a>
+                  <Link href={routes.HOME}>Home</Link>
                 </li>
                 <li className="md:hover:scale-110">
-                  <a href="#">About Us</a>
+                  <Link href={routes.ABOUT}>About Us</Link>
                 </li>
                 <li className="md:hover:scale-110">
-                  <a href="#">Contact Us</a>
+                  <Link href={routes.CONTACT}>Contact Us</Link>
                 </li>
                 <li className="md:hover:scale-110">
-                  <a href="#">Our Story</a>
+                  <Link href={routes.OUR_STORY}>Our Story</Link>
                 </li>
               </ul>
               {/* Socials Container */}
               <div className="mb-12 flex justify-center gap-6">
-                <a href="#" className="md:hover:scale-110">
+                <Link href={routes.HOME} className="md:hover:scale-110">
                   <Image
                     src="/facebook-circle-logo.svg"
                     alt={"Link to Kape Facebook"}
                     width={40}
                     height={40}
                   />
-                </a>
+                </Link>
                 <a
                   href="https://www.instagram.com/kapecoffee.co/"
                   target="_blank"
