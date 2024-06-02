@@ -46,7 +46,7 @@ const ShoppingCartModal = () => {
             {cartCount === 0 ? (
               <h3>There is currently nothing in your cart</h3>
             ) : (
-              <ul>
+              <ul className="overflow-y-auto">
                 {Object.values(cartDetails ?? {}).map((entry) => (
                   <li key={entry.id} className="flex py-6">
                     <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
