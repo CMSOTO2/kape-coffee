@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const CheckoutError = () => {
   return (
-    <div className="h-screen px-4">
-      <div className="mx-auto mt-32 md:max-w-[50vw]">
+    <div className="h-screen bg-kape-beige px-4">
+      <div className="mx-auto pt-32 md:max-w-[50vw]">
         <CircleX className="mx-auto my-6 h-20 w-20 text-red-600" />
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-900 md:text-4xl">

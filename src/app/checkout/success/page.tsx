@@ -15,8 +15,8 @@ const CheckoutSuccess = () => {
   }, []);
 
   return (
-    <div className="h-screen">
-      <div className="mx-auto mt-32 md:max-w-[50vw]">
+    <div className="h-screen bg-kape-beige">
+      <div className="mx-auto pt-32 md:max-w-[50vw]">
         <CheckCheck className="mx-auto my-6 h-20 w-20 text-green-600" />
         <div className="text-center">
           <h1 className="text-base font-semibold text-gray-900 md:text-2xl">

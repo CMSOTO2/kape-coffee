@@ -44,7 +44,19 @@ const ShoppingCartModal = () => {
           </SheetHeader>
           <div className="flex h-full flex-col justify-between">
             {cartCount === 0 ? (
-              <h3>There is currently nothing in your cart</h3>
+              <div className="flex h-full flex-col items-center justify-center">
+                <h3 className="text-center text-lg">
+                  There is currently nothing in your cart
+                </h3>
+                <Image src="/empty-cart.png" width={200} height={200} alt="" />
+                <Button
+                  onClick={() => handleCartClick()}
+                  className="text-xl font-medium text-kape-green hover:text-kape-green/80"
+                  variant="ghost"
+                >
+                  Continue Shopping
+                </Button>
+              </div>
             ) : (
               <ul className="overflow-y-auto">
                 {Object.values(cartDetails ?? {}).map((entry) => (
@@ -72,7 +84,7 @@ const ShoppingCartModal = () => {
                         <div className="flex">
                           <button
                             type="button"
-                            className="font-medium text-purple-400 hover:text-purple-400/80"
+                            className="font-semibold text-kape-green hover:text-kape-green/80"
                             onClick={() => removeItem(entry.id)}
                           >
                             Remove
@@ -84,31 +96,36 @@ const ShoppingCartModal = () => {
                 ))}
               </ul>
             )}
-            <div className="w-full border-t border-gray-200 px-4 py-6 sm:px-6">
-              <div className="flex justify-between text-base font-medium text-gray-900">
-                <p>Subtotal:</p>
-                <p>{formattedTotalPrice}</p>
-              </div>
-              <p className="mt-0.5 text-sm text-gray-500">
-                Shipping and taxes are calculated at checkout.
-              </p>
-              <div className="mt-6">
-                <Button className="w-full" onClick={handleCheckoutClick}>
-                  Checkout
-                </Button>
-              </div>
-              <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                <p>
-                  OR{" "}
-                  <button
-                    onClick={() => handleCartClick()}
-                    className="font-medium text-purple-400 hover:text-purple-400/80"
-                  >
-                    Continue Shopping
-                  </button>
+            {cartCount === 0 ? null : (
+              <div className="w-full border-t border-gray-200 px-4 py-6 sm:px-6">
+                <div className="flex justify-between text-base font-medium text-gray-900">
+                  <p>Subtotal:</p>
+                  <p>{formattedTotalPrice}</p>
+                </div>
+                <p className="mt-0.5 text-sm text-gray-500">
+                  Shipping and taxes are calculated at checkout.
                 </p>
+                <div className="mt-6">
+                  <Button
+                    className="w-full bg-kape-green"
+                    onClick={handleCheckoutClick}
+                  >
+                    Checkout
+                  </Button>
+                </div>
+                <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                  <p>
+                    OR{" "}
+                    <button
+                      onClick={() => handleCartClick()}
+                      className="font-medium text-kape-green hover:text-kape-green/80"
+                    >
+                      Continue Shopping
+                    </button>
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </SheetContent>
       </Sheet>
