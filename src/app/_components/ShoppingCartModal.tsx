@@ -42,7 +42,7 @@ const ShoppingCartModal = () => {
           <SheetHeader>
             <SheetTitle>Your Cart ({cartCount})</SheetTitle>
           </SheetHeader>
-          <div className="grid gap-4 divide-y py-4">
+          <div className="flex h-full flex-col justify-between">
             {cartCount === 0 ? (
               <h3>There is currently nothing in your cart</h3>
             ) : (
@@ -84,7 +84,7 @@ const ShoppingCartModal = () => {
                 ))}
               </ul>
             )}
-            <div className="self-end border-t border-gray-200 px-4 py-6 sm:px-6">
+            <div className="w-full border-t border-gray-200 px-4 py-6 sm:px-6">
               <div className="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal:</p>
                 <p>{formattedTotalPrice}</p>
