@@ -20,6 +20,8 @@ const ShoppingCartModal = () => {
     removeItem,
     formattedTotalPrice,
     redirectToCheckout,
+    incrementItem,
+    decrementItem,
   } = useShoppingCart();
 
   const handleCheckoutClick = async (event: any) => {
@@ -79,8 +81,22 @@ const ShoppingCartModal = () => {
                           {entry.description}
                         </p>
                       </div>
-                      <div className="flex flex-1 items-end justify-between text-sm">
-                        <p className="text-gray-500">QTY: {entry.quantity}</p>
+                      <div className="mt-2 flex flex-1 items-center justify-between text-sm">
+                        <div className="flex items-center gap-4">
+                          <p className="text-gray-500">QTY: {entry.quantity}</p>
+                          <button
+                            className="text-xl"
+                            onClick={() => decrementItem(entry.id)}
+                          >
+                            -
+                          </button>
+                          <button
+                            className="text-xl"
+                            onClick={() => incrementItem(entry.id)}
+                          >
+                            +
+                          </button>
+                        </div>
                         <div className="flex">
                           <button
                             type="button"
@@ -107,7 +123,7 @@ const ShoppingCartModal = () => {
                 </p>
                 <div className="mt-6">
                   <Button
-                    className="w-full bg-kape-green"
+                    className="w-full bg-kape-green hover:bg-kape-green/80"
                     onClick={handleCheckoutClick}
                   >
                     Checkout
