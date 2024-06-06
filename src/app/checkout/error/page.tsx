@@ -2,7 +2,7 @@
 
 import { ClearCartDialog } from "@/app/_components/ClearCartDialog";
 import { Button } from "@/components/ui/button";
-import { routes } from "@/lib/constants";
+import { ROUTES } from "@/lib/constants";
 import { CircleX } from "lucide-react";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ const CheckoutError = () => {
 
           <div className="mt-5 flex flex-col items-center justify-center gap-4 md:flex-row">
             <Button variant="secondary" asChild>
-              <Link href={routes.HOME}>Go back to main page</Link>
+              <Link href={ROUTES.HOME}>Go back to main page</Link>
             </Button>
             <ClearCartDialog />
           </div>

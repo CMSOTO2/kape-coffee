@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { routes } from "@/lib/constants";
+import { ROUTES } from "@/lib/constants";
 import { CheckCheck } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect } from "react";
@@ -26,7 +26,7 @@ const CheckoutSuccess = () => {
           <p>Have a great day!</p>
 
           <Button className="mt-5" asChild>
-            <Link href={routes.HOME}>Go Back</Link>
+            <Link href={ROUTES.HOME}>Go Back</Link>
           </Button>
         </div>
       </div>

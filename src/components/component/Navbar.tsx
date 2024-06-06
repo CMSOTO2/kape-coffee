@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { navLinks, routes } from "@/lib/constants";
+import { navLinks, ROUTES } from "@/lib/constants";
 import KapeLogo from "@/app/_components/KapeLogo";
 import { Button } from "../ui/button";
 import { useShoppingCart } from "use-shopping-cart";
 import ShoppingCartModal from "@/app/_components/ShoppingCartModal";
 import { ShoppingBag } from "lucide-react";
+import { NavigationMenuDesktop } from "@/app/_components/NavMenu";
 
 export function Navbar() {
   const { handleCartClick, cartCount } = useShoppingCart();
@@ -16,13 +17,14 @@ export function Navbar() {
       <div className="mx-auto flex max-w-[1440px] items-center justify-between py-4 md:px-6 md:py-4">
         <Link
           className="flex items-center gap-2 text-lg font-semibold"
-          href={routes.HOME}
+          href={ROUTES.HOME}
         >
           <KapeLogo width="70" height="60" />
           <span className="sr-only">Kape</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          {navLinks.map((navLink) => {
+          <NavigationMenuDesktop />
+          {/* {navLinks.map((navLink) => {
             return (
               <Link
                 key={navLink.label}
@@ -32,7 +34,7 @@ export function Navbar() {
                 {navLink.label}
               </Link>
             );
-          })}
+          })} */}
         </nav>
         <Button
           onClick={() => handleCartClick()}

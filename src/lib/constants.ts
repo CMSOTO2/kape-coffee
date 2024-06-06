@@ -1,18 +1,20 @@
 import Stripe from "stripe";
 
-export const routes = {
+export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
   CHECKOUT_SUCCESS: "/checkout/success",
   CHECKOUT_ERROR: "/checkout/error",
   OUR_STORY: "/our-story",
+  MENU: "/menu",
 } as const;
 
 export const navLinks = [
-  { label: "Home", href: routes.HOME },
-  { label: "About", href: routes.ABOUT },
-  { label: "Contact", href: routes.CONTACT },
+  { label: "Home", href: ROUTES.HOME },
+  { label: "About", href: ROUTES.ABOUT },
+  { label: "Contact", href: ROUTES.CONTACT },
+  { label: "Menu", href: ROUTES.MENU },
 ] as const;
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
