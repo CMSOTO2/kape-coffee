@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About | Kape",
+  description:
+    "Uncover the story behind Kape Coffee Co. - Learn about our passion for coffee, commitment to quality, and dedication to creating a welcoming atmosphere.",
+};
 
 const About = () => {
   return (
