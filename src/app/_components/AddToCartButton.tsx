@@ -37,6 +37,7 @@ const AddToCart = ({
         addItem(product);
         handleCartClick();
       }}
+      className="bg-kape-green"
     >
       Add to cart
     </Button>

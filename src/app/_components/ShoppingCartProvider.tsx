@@ -9,7 +9,7 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
   const isDevelopment = process.env.NODE_ENV === "development";
   const basePath = isDevelopment
     ? "http://localhost:3000"
-    : "https://kape-coffee.vercel.app";
+    : "https://www.kapecoffee.co";
 
   return (
     <CartProvider

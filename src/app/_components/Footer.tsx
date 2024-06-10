@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="rounded-t-[1.25rem] bg-kape-black px-4 font-bold text-white">
+    <footer className="rounded-t-[1.25rem] bg-kape-beige px-4 font-bold text-kape-green">
       <div className="mx-auto flex max-w-[1440px] flex-col">
         <div className="py-12 lg:flex lg:justify-between lg:gap-4">
           {/* Brand Container */}
@@ -42,14 +42,6 @@ export default function Footer() {
               </ul>
               {/* Socials Container */}
               <div className="mb-12 flex justify-center gap-6">
-                <Link href={ROUTES.HOME} className="lg:hover:scale-110">
-                  <Image
-                    src="/facebook-circle-logo.svg"
-                    alt={"Link to Kape Facebook"}
-                    width={40}
-                    height={40}
-                  />
-                </Link>
                 <a
                   href="https://www.instagram.com/kapecoffee.co/"
                   target="_blank"
