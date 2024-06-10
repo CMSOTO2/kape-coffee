@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { navLinks } from "@/lib/constants";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,56 +58,20 @@ export function NavigationMenuDesktop() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem
-                href="/docs"
-                title="Introduction"
-                className="hover:outline-kape-black focus:outline-kape-black"
+          {navLinks.map((navLink) => {
+            return (
+              <Link
+                key={navLink.href}
+                href={navLink.href}
+                legacyBehavior
+                passHref
               >
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem
-                href="/docs/installation"
-                title="Installation"
-                className="hover:outline-kape-black focus:outline-kape-black"
-              >
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem
-                href="/docs/primitives/typography"
-                title="Typography"
-                className="hover:outline-kape-black focus:outline-kape-black"
-              >
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                  className="bg-blue hover:outline-kape-black focus:outline-kape-black"
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  {navLink.label}
+                </NavigationMenuLink>
+              </Link>
+            );
+          })}
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

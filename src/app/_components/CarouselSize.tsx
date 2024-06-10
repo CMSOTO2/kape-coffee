@@ -54,7 +54,7 @@ export function CarouselSize() {
         {data?.map((product: any) => (
           <CarouselItem
             key={product.id}
-            className="min-w-[350px] max-w-[450px] bg-kape-gray sm:basis-1/2 lg:basis-1/3"
+            className="min-w-[350px] max-w-[450px] bg-kape-beige sm:basis-1/2 lg:basis-1/3"
           >
             <Card className="h-full">
               <CardContent className="relative flex flex-col items-center justify-center">

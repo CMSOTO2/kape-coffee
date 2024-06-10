@@ -8,13 +8,15 @@ export const ROUTES = {
   CHECKOUT_ERROR: "/checkout/error",
   OUR_STORY: "/our-story",
   MENU: "/menu",
+  PRODUCTS: "/products",
 } as const;
 
 export const navLinks = [
   { label: "Home", href: ROUTES.HOME },
+  { label: "Products", href: ROUTES.PRODUCTS },
+  { label: "Menu", href: ROUTES.MENU },
   { label: "About", href: ROUTES.ABOUT },
   { label: "Contact", href: ROUTES.CONTACT },
-  { label: "Menu", href: ROUTES.MENU },
 ] as const;
 
 const isProduction = process.env.NODE_ENV === "production";

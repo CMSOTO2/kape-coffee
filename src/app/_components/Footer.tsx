@@ -1,11 +1,11 @@
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, navLinks } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="rounded-t-[1.25rem] bg-kape-beige px-4 font-bold text-kape-green">
+    <footer className="bottom-0 bg-kape-green px-4 font-bold text-white">
       <div className="mx-auto flex max-w-[1440px] flex-col">
         <div className="py-12 lg:flex lg:justify-between lg:gap-4">
           {/* Brand Container */}
@@ -26,19 +26,13 @@ export default function Footer() {
             <div className="lg:flex lg:gap-20">
               {/* Links Container */}
               <ul className="mb-12 flex flex-col items-center gap-8 whitespace-nowrap text-base lg:flex-row">
-                {/* Todo add link hrefs */}
-                <li className="lg:hover:scale-110">
-                  <Link href={ROUTES.HOME}>Home</Link>
-                </li>
-                <li className="lg:hover:scale-110">
-                  <Link href={ROUTES.ABOUT}>About Us</Link>
-                </li>
-                <li className="lg:hover:scale-110">
-                  <Link href={ROUTES.CONTACT}>Contact Us</Link>
-                </li>
-                <li className="lg:hover:scale-110">
-                  <Link href={ROUTES.OUR_STORY}>Our Story</Link>
-                </li>
+                {navLinks.map((navLink) => {
+                  return (
+                    <li key={navLink.href} className="lg:hover:scale-110">
+                      <Link href={navLink.href}>{navLink.label}</Link>
+                    </li>
+                  );
+                })}
               </ul>
               {/* Socials Container */}
               <div className="mb-12 flex justify-center gap-6">

@@ -27,8 +27,8 @@ export default async function Home() {
     <>
       <Hero />
       <FeaturedProducts />
-      <Menu />
-      <WeAre />
+      {/* <Menu />
+      <WeAre /> */}
     </>
   );
 }
