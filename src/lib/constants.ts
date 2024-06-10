@@ -17,4 +17,15 @@ export const navLinks = [
   { label: "Menu", href: ROUTES.MENU },
 ] as const;
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const isProduction = process.env.NODE_ENV === "production";
+
+export const ENV_KEYS = {
+  STRIPE_PUBLIC_KEY: isProduction
+    ? process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_PROD
+    : process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_DEV,
+  STRIPE_PRIVATE_KEY: isProduction
+    ? process.env.STRIPE_SECRET_KEY_PROD
+    : process.env.STRIPE_SECRET_KEY_DEV,
+} as const;
+
+export const stripe = new Stripe(ENV_KEYS.STRIPE_PRIVATE_KEY!);

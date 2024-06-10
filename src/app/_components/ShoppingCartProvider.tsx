@@ -1,10 +1,11 @@
 "use client";
 
+import { ENV_KEYS } from "@/lib/constants";
 import React, { ReactNode } from "react";
 import { CartProvider } from "use-shopping-cart";
 
 const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
-  const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string;
+  const stripeKey = ENV_KEYS.STRIPE_PUBLIC_KEY as string;
   const isDevelopment = process.env.NODE_ENV === "development";
   const basePath = isDevelopment
     ? "http://localhost:3000"
