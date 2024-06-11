@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const PrivacyPolicy = () => {
   return (
-    <section className="bg-kape-beige py-10">
+    <section className="bg-kape-beige px-4 py-10">
       <div className="prose mx-auto max-w-[1440px]">
         <Privacy />
       </div>
