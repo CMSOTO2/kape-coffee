@@ -6,9 +6,9 @@ export const ROUTES = {
   CONTACT: "/contact",
   CHECKOUT_SUCCESS: "/checkout/success",
   CHECKOUT_ERROR: "/checkout/error",
-  OUR_STORY: "/our-story",
   MENU: "/menu",
   PRODUCTS: "/products",
+  PRIVACY_POLICY: "/privacy-policy",
 } as const;
 
 export const navLinks = [

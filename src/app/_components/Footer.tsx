@@ -97,7 +97,9 @@ export default function Footer() {
         </div>
         {/* Privacy Policy Container */}
         <div className="flex flex-col gap-4 border-t-[1px] border-t-white border-opacity-10 py-8 text-center text-sm lg:flex-row lg:justify-between lg:gap-0">
-          <p className="opacity-70">Privacy Policy</p>
+          <Link href={ROUTES.PRIVACY_POLICY} className="opacity-70">
+            Privacy Policy
+          </Link>
           <p className="opacity-50">
             &copy; 2024 Kape Coffee - All rights preserved.
           </p>
