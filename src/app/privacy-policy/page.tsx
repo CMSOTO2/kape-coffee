@@ -1,5 +1,11 @@
 import React from "react";
 import Privacy from "../../lib/content/privacy-policy.mdx";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Kape",
+  description: "Protecting Your Privacy at Kape Coffee Co.",
+};
 
 const PrivacyPolicy = () => {
   return (
