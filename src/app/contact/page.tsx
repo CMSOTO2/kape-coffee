@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <section className="min-h-screen bg-kape-beige pb-1">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center px-4">
         <h1 className="pt-10 text-center text-5xl text-kape-black md:text-7xl">
           Contact Us
         </h1>
