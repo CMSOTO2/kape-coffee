@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { ROUTES } from "@/lib/constants";
 import KapeLogo from "@/app/_components/KapeLogo";
-import { Button } from "../ui/button";
+import { Button } from "../../components/ui/button";
 import { useShoppingCart } from "use-shopping-cart";
 import ShoppingCartModal from "@/app/_components/ShoppingCartModal";
 import { ShoppingBag } from "lucide-react";
 import { NavigationMenuDesktop } from "@/app/_components/NavMenu";
+import { MenuDrawer } from "./MenuDrawer";
 
 export function Navbar() {
   const { handleCartClick, cartCount } = useShoppingCart();
@@ -15,6 +16,10 @@ export function Navbar() {
   return (
     <header className="sticky left-0 top-0 z-50 border-b-2 border-kape-black bg-kape-beige px-4">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between py-4 md:px-6 md:py-4">
+        <div className="md:hidden">
+          {/* Mobile Menu */}
+          <MenuDrawer />
+        </div>
         <Link
           className="flex items-center gap-2 text-lg font-semibold"
           href={ROUTES.HOME}
@@ -38,26 +43,5 @@ export function Navbar() {
         </div>
       </div>
     </header>
-  );
-}
-
-function MenuIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
   );
 }
