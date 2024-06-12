@@ -29,7 +29,11 @@ export function MenuDrawer() {
               <ul className="flex flex-col items-center justify-center gap-6">
                 {navLinks.map((navLink) => {
                   return (
-                    <Link href={navLink.href} className="w-full">
+                    <Link
+                      href={navLink.href}
+                      key={navLink.href}
+                      className="w-full"
+                    >
                       <DrawerClose asChild>
                         <li className="w-full border-b-2 border-kape-black text-4xl font-semibold">
                           {navLink.label}
