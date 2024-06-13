@@ -14,6 +14,7 @@ export default function Hero() {
           muted={true}
           className="h-full w-full object-cover"
           aria-label="Coffee beans flying"
+          playsInline
         />
       </div>
     </section>
