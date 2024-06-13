@@ -15,7 +15,7 @@ export function MenuDrawer() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="ghost">
+        <Button variant="ghost" size="icon">
           <Menu className="h-8 w-8" />
         </Button>
       </DrawerTrigger>
