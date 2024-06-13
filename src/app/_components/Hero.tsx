@@ -8,7 +8,7 @@ export default function Hero() {
           Modern Coffee.
         </h1>
         <video
-          src="/coffee-beans-flying.mp4"
+          src="/kape-hero-video.mp4"
           autoPlay
           loop
           muted={true}
