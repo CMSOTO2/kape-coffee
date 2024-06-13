@@ -3,6 +3,7 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -10,6 +11,7 @@ import {
 import { Menu } from "lucide-react";
 import { navLinks } from "@/lib/constants";
 import Link from "next/link";
+import Image from "next/image";
 
 export function MenuDrawer() {
   return (
@@ -19,12 +21,12 @@ export function MenuDrawer() {
           <Menu className="h-8 w-8" />
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="mb-20">
+      <DrawerContent className="mb-4">
         <div className="mx-auto w-full">
-          <DrawerHeader>
-            <DrawerTitle className="text-center">Kape Coffe Co.</DrawerTitle>
+          <DrawerHeader className="flex items-center justify-center">
+            <Image src="/Kape-Logo-2024.png" alt="" width={60} height={60} />
           </DrawerHeader>
-          <div className="w-full p-4 pb-0">
+          <div className="w-full px-4 pb-0">
             <nav>
               <ul className="flex flex-col items-center justify-center gap-6">
                 {navLinks.map((navLink) => {
@@ -32,12 +34,10 @@ export function MenuDrawer() {
                     <Link
                       href={navLink.href}
                       key={navLink.href}
-                      className="w-full"
+                      className="w-full border-b-2 border-kape-black text-2xl font-semibold last-of-type:border-none"
                     >
                       <DrawerClose asChild>
-                        <li className="w-full border-b-2 border-kape-black text-4xl font-semibold">
-                          {navLink.label}
-                        </li>
+                        <li className="w-full">{navLink.label}</li>
                       </DrawerClose>
                     </Link>
                   );
