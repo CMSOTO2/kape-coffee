@@ -1,4 +1,4 @@
-import { ROUTES, navLinks } from "@/lib/constants";
+import { ROUTES } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -24,16 +24,9 @@ export default function Footer() {
           </div>
           <div>
             <div className="lg:flex lg:gap-20">
-              {/* Links Container */}
-              <ul className="mb-12 flex flex-col items-center gap-8 whitespace-nowrap text-base lg:flex-row">
-                {navLinks.map((navLink) => {
-                  return (
-                    <li key={navLink.href} className="lg:hover:scale-110">
-                      <Link href={navLink.href}>{navLink.label}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
+              <div className="mb-12 flex flex-col items-center gap-8 whitespace-nowrap text-base lg:flex-row">
+                <Link href={ROUTES.CONTACT}>Contact</Link>
+              </div>
               {/* Socials Container */}
               <div className="mb-12 flex justify-center gap-6">
                 <a
@@ -101,7 +94,7 @@ export default function Footer() {
             Privacy Policy
           </Link>
           <p className="opacity-50">
-            &copy; 2024 Kape Coffee - All rights preserved.
+            &copy; 2024 Kape Coffee - All rights reserved.
           </p>
         </div>
       </div>
