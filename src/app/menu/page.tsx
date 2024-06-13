@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const Menu = () => {
   return (
     <section className="min-h-screen bg-kape-beige pb-10">
-      <div className="mx-auto max-w-[1440px]">
-        <h1 className="pt-10 text-center text-5xl text-kape-black md:text-7xl">
+      <div className="mx-auto max-w-[1440px] px-4">
+        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-7xl">
           Menu
         </h1>
         <Image
-          className="mx-auto mt-4"
+          className="mx-auto mt-10"
           src="/kape-menu.png"
           alt="kape menu"
           width={400}

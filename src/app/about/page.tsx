@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section className="min-h-screen bg-kape-beige pb-10">
       <div className="mx-auto max-w-[1440px] px-4">
-        <h1 className="pt-10 text-center text-5xl text-kape-black md:text-7xl">
+        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-7xl">
           About Us
         </h1>
         <div className="mx-auto mt-10 flex w-full flex-col items-center justify-center gap-4">
