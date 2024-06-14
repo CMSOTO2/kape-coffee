@@ -17,7 +17,7 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
       cartMode="client-only"
       stripe={stripeKey}
       successUrl={`${basePath}/checkout/success`}
-      cancelUrl={`${basePath}/checkout/error`}
+      cancelUrl={`${basePath}/`}
       currency="USD"
       billingAddressCollection={true}
       shouldPersist
