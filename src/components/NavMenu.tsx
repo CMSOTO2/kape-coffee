@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/shadui/navigation-menu";
 import { navLinks } from "@/lib/constants";
 
 export function NavigationMenuDesktop() {

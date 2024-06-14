@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadui/button";
 import React from "react";
 import { useShoppingCart } from "use-shopping-cart";
 
@@ -37,7 +37,7 @@ const AddToCart = ({
         addItem(product);
         handleCartClick();
       }}
-      className="bg-kape-green"
+      className="w-full rounded-none bg-kape-green py-6"
     >
       Add to cart
     </Button>
