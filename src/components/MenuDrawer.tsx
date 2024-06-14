@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,7 +7,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
+} from "@/components/shadui/drawer";
 import { Menu } from "lucide-react";
 import { navLinks } from "@/lib/constants";
 import Link from "next/link";

@@ -1,5 +1,5 @@
-import FeaturedProducts from "./_components/FeaturedProducts";
-import Hero from "./_components/Hero";
+import FeaturedProducts from "./components/FeaturedProducts";
+import Hero from "../components/Hero";
 
 const getHomePageContent = async () => {
   const version = process.env.SB_DATA_VERSION;
@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
     </>
   );
 }

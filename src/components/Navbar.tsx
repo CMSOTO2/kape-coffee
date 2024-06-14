@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { ROUTES } from "@/lib/constants";
-import KapeLogo from "@/app/_components/KapeLogo";
-import { Button } from "../../components/ui/button";
+import KapeLogo from "@/components/KapeLogo";
+import { Button } from "@/components/shadui/button";
 import { useShoppingCart } from "use-shopping-cart";
-import ShoppingCartModal from "@/app/_components/ShoppingCartModal";
+import ShoppingCartModal from "@/components/ShoppingCartModal";
 import { ShoppingBag } from "lucide-react";
-import { NavigationMenuDesktop } from "@/app/_components/NavMenu";
+import { NavigationMenuDesktop } from "@/components/NavMenu";
 import { MenuDrawer } from "./MenuDrawer";
 
 export function Navbar() {
@@ -33,9 +33,9 @@ export function Navbar() {
         <Button
           onClick={() => handleCartClick()}
           variant="ghost"
-          className="p-0"
+          className="gap-2 p-0"
         >
-          <span>{cartCount}</span>
+          <span className="text-[1rem]">{cartCount}</span>
           <ShoppingBag />
         </Button>
         <div className="hidden">

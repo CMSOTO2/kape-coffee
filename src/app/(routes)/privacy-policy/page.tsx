@@ -1,5 +1,5 @@
 import React from "react";
-import Privacy from "../../lib/content/privacy-policy.mdx";
+import Privacy from "../../../lib/content/privacy-policy.mdx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

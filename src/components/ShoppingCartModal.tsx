@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadui/button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
-} from "@/components/ui/sheet";
+} from "@/components/shadui/sheet";
 import Image from "next/image";
 import React from "react";
 import { useShoppingCart } from "use-shopping-cart";
