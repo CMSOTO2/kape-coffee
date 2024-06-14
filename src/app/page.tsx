@@ -1,3 +1,4 @@
+import InStoreMenu from "@/components/in-store-menu";
 import Hero from "../components/Hero";
 
 const getHomePageContent = async () => {
@@ -21,6 +22,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <InStoreMenu />
     </>
   );
 }
