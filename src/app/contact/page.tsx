@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section className="min-h-screen bg-kape-beige pb-1">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center px-4">
-        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-7xl">
+        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-4xl">
           Contact Us
         </h1>
         <div className="mt-10 overflow-hidden rounded-xl">
