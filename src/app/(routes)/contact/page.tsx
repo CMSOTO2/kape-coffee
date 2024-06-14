@@ -1,3 +1,4 @@
+import CommonPageTemplate from "@/components/CommonPageTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
@@ -10,29 +11,24 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <section className="min-h-screen bg-kape-beige pb-1">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center px-4">
-        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-4xl">
-          Contact Us
-        </h1>
-        <div className="mt-10 overflow-hidden rounded-xl">
-          <Image
-            src="/contact-us.jpg"
-            alt="Kape crew picture"
-            width={1000}
-            height={600}
-          />
-        </div>
-        <p className="mt-10">
-          Want to chat about coffee? Have any questions about our service or
-          products?
-        </p>
-        <p>
-          Feel free to connect with us via email at{" "}
-          <a href="mailto:Kapecolumbus@gmail.com">Kapecolumbus@gmail.com</a>
-        </p>
+    <CommonPageTemplate title="Contact">
+      <div className="relative mx-auto mt-10 h-[500px] w-[400px] overflow-hidden rounded-xl ">
+        <Image
+          src="/contact-us.jpg"
+          alt="Kape crew picture"
+          className="object-cover"
+          fill
+        />
       </div>
-    </section>
+      <p className="mt-10">
+        Want to chat about coffee? Have any questions about our service or
+        products?
+      </p>
+      <p>
+        Feel free to connect with us via email at{" "}
+        <a href="mailto:Kapecolumbus@gmail.com">Kapecolumbus@gmail.com</a>
+      </p>
+    </CommonPageTemplate>
   );
 };
 

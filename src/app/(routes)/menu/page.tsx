@@ -1,3 +1,4 @@
+import CommonPageTemplate from "@/components/CommonPageTemplate";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
@@ -10,20 +11,15 @@ export const metadata: Metadata = {
 
 const Menu = () => {
   return (
-    <section className="min-h-screen bg-kape-beige pb-10">
-      <div className="mx-auto max-w-[1440px] px-4">
-        <h1 className="pt-10 text-center text-3xl font-bold uppercase text-kape-black md:text-4xl">
-          Menu
-        </h1>
-        <Image
-          className="mx-auto mt-10"
-          src="/kape-menu.png"
-          alt="kape menu"
-          width={400}
-          height={600}
-        />
-      </div>
-    </section>
+    <CommonPageTemplate title="Menu">
+      <Image
+        className="mx-auto mt-10"
+        src="/kape-menu.png"
+        alt="kape menu"
+        width={400}
+        height={600}
+      />
+    </CommonPageTemplate>
   );
 };
 
