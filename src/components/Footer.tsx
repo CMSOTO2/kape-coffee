@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
             </div>
             {/* Locations Container */}
-            <div className="flex flex-col items-center gap-8 text-lg lg:flex-row lg:gap-16">
+            {/* <div className="flex flex-col items-center gap-8 text-lg lg:flex-row lg:gap-16">
               <div className="lg:hover:scale-110">
                 <a
                   href="https://maps.app.goo.gl/e4L15S1j2aeWHxhS7"
@@ -85,7 +85,7 @@ export default function Footer() {
                   </span>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Privacy Policy Container */}
