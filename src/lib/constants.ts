@@ -31,3 +31,7 @@ export const ENV_KEYS = {
 } as const;
 
 export const stripe = new Stripe(ENV_KEYS.STRIPE_PRIVATE_KEY!);
+
+export const basePath = isProduction
+  ? "https://www.kapecoffee.co"
+  : "http://localhost:3000";
