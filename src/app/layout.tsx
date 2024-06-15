@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Home | Kape",
   description:
     "Welcome to Kape: A Haven for Coffee Enthusiasts - Experience the finest blends and cozy ambiance in town. Indulge in artisanal brews and delightful treats. Your perfect spot for coffee, community, and conversation.",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
@@ -23,6 +24,9 @@ export default function RootLayout({
     <ShoppingCartProvider>
       <ReactQueryClientProvider>
         <html lang="en" className="bg-kape-black">
+          <head>
+            <link rel="icon" href="/icon.ico" type="image" sizes="any" />
+          </head>
           <body
             className={`${montserrat.className} scroll-smooth bg-white transition-all`}
           >
