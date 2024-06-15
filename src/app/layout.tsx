@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "../components/Footer";
 import ReactQueryClientProvider from "../components/ReactQueryClientProvider";
 import ShoppingCartProvider from "../components/ShoppingCartProvider";
+import { ViewTransitions } from "next-view-transitions";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -22,15 +23,17 @@ export default function RootLayout({
   return (
     <ShoppingCartProvider>
       <ReactQueryClientProvider>
-        <html lang="en" className="bg-kape-black">
-          <body
-            className={`${montserrat.className} scroll-smooth bg-white transition-all`}
-          >
-            <Navbar />
-            {children}
-            <Footer />
-          </body>
-        </html>
+        <ViewTransitions>
+          <html lang="en" className="bg-kape-black">
+            <body
+              className={`${montserrat.className} scroll-smooth bg-white transition-all`}
+            >
+              <Navbar />
+              {children}
+              <Footer />
+            </body>
+          </html>
+        </ViewTransitions>
       </ReactQueryClientProvider>
     </ShoppingCartProvider>
   );

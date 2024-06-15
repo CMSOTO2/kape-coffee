@@ -1,6 +1,6 @@
 import { ROUTES } from "@/lib/constants";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import React from "react";
 
 export default function Footer() {

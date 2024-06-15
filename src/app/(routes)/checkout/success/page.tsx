@@ -3,7 +3,7 @@
 import { Button } from "@/components/shadui/button";
 import { ROUTES } from "@/lib/constants";
 import { CheckCheck } from "lucide-react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import React, { useEffect } from "react";
 import { useShoppingCart } from "use-shopping-cart";
 

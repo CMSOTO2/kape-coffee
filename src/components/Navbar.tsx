@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { ROUTES } from "@/lib/constants";
 import { Button } from "@/components/shadui/button";
 import { useShoppingCart } from "use-shopping-cart";

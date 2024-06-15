@@ -10,7 +10,7 @@ import {
 } from "@/components/shadui/drawer";
 import { Menu } from "lucide-react";
 import { navLinks } from "@/lib/constants";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import Image from "next/image";
 
 export function MenuDrawer() {
