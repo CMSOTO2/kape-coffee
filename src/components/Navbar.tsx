@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { ROUTES } from "@/lib/constants";
-import KapeLogo from "@/components/KapeLogo";
 import { Button } from "@/components/shadui/button";
 import { useShoppingCart } from "use-shopping-cart";
 import ShoppingCartModal from "@/components/ShoppingCartModal";
 import { ShoppingBag } from "lucide-react";
 import { NavigationMenuDesktop } from "@/components/NavMenu";
 import { MenuDrawer } from "./MenuDrawer";
+import Image from "next/image";
 
 export function Navbar() {
   const { handleCartClick, cartCount } = useShoppingCart();
@@ -24,7 +24,7 @@ export function Navbar() {
           className="flex items-center gap-2 text-lg font-semibold"
           href={ROUTES.HOME}
         >
-          <KapeLogo width="70" height="60" />
+          <Image src="/Kape-Logo-2024.png" alt="" width={80} height={80} />
           <span className="sr-only">Kape</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">

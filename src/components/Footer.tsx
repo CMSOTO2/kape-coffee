@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bottom-0 bg-kape-green px-4 font-bold text-white">
       <div className="mx-auto flex max-w-[1440px] flex-col">
-        <div className="py-12 lg:flex lg:justify-between lg:gap-4">
+        <div className="pt-12 lg:flex lg:justify-between lg:gap-4">
           {/* Brand Container */}
           <div className="mb-12 flex flex-col items-center">
             <Image

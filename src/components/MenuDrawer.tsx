@@ -24,7 +24,7 @@ export function MenuDrawer() {
       <DrawerContent className="mb-4">
         <div className="mx-auto w-full">
           <DrawerHeader className="flex items-center justify-center">
-            <Image src="/Kape-Logo-2024.png" alt="" width={60} height={60} />
+            <Image src="/Kape-Logo-2024.png" alt="" width={80} height={80} />
           </DrawerHeader>
           <div className="w-full px-4 pb-0">
             <nav>
