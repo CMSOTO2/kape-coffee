@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "Home | Kape",
   description:
     "Welcome to Kape: A Haven for Coffee Enthusiasts - Experience the finest blends and cozy ambiance in town. Indulge in artisanal brews and delightful treats. Your perfect spot for coffee, community, and conversation.",
-  icons: "/icon.ico",
 };
 
 export default function RootLayout({
