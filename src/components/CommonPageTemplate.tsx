@@ -12,7 +12,7 @@ const CommonPageTemplate = ({
   return (
     <section className="min-h-screen bg-kape-beige pb-10">
       <div className="mx-auto max-w-[1440px] px-10 text-center">
-        <div className="mb-24 pt-16 text-center">
+        <div className="mb-10 pt-16 text-center">
           <h1 className="text-center text-3xl font-bold uppercase text-kape-black md:text-4xl ">
             {title}
           </h1>

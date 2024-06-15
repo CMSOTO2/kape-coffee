@@ -69,6 +69,7 @@ const ShoppingCartModal = () => {
                         alt={entry.name + "product image"}
                         width={100}
                         height={100}
+                        className="h-full w-full object-cover"
                       />
                     </div>
                     <div className="ml-4 flex flex-1 flex-col">
