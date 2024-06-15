@@ -24,7 +24,7 @@ export function Navbar() {
           className="flex items-center gap-2 text-lg font-semibold"
           href={ROUTES.HOME}
         >
-          <Image src="/Kape-Logo-2024.png" alt="" width={80} height={80} />
+          <Image src="/Kape-Logo-2024.png" alt="" width={70} height={70} />
           <span className="sr-only">Kape</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
