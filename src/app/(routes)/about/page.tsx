@@ -21,7 +21,7 @@ const About = () => {
         />
       </div>
 
-      <p className="px-4 text-xl">
+      <p className="px-4 pt-8 text-xl">
         Our team wanted to start Kape to share a simple expression: our mutual
         love for coffee. While nostalgic tasting notes from our childhood are
         woven within our speciality drinks, our unspoken rule is to also service
