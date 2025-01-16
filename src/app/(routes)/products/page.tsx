@@ -11,12 +11,7 @@ export const metadata: Metadata = {
 
 const Products = () => {
   return (
-    <CommonPageTemplate
-      title="Products"
-      description={
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, consequatur?"
-      }
-    >
+    <CommonPageTemplate title="Products">
       <ProductsComponent />
     </CommonPageTemplate>
   );

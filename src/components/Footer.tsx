@@ -18,9 +18,7 @@ export default function Footer() {
               width={108}
               height={96}
             />
-            <p className="text-center text-sm opacity-70">
-              Asian-Inspired Cafe in Ohio
-            </p>
+            <p className="text-center text-sm">Asian-Inspired Cafe in Ohio</p>
           </div>
           <div>
             <div className="lg:flex lg:gap-20">
@@ -90,12 +88,8 @@ export default function Footer() {
         </div>
         {/* Privacy Policy Container */}
         <div className="flex flex-col gap-4 border-t-[1px] border-t-white border-opacity-10 py-8 text-center text-sm lg:flex-row lg:justify-between lg:gap-0">
-          <Link href={ROUTES.PRIVACY_POLICY} className="opacity-70">
-            Privacy Policy
-          </Link>
-          <p className="opacity-50">
-            &copy; 2024 Kape Coffee - All rights reserved.
-          </p>
+          <Link href={ROUTES.PRIVACY_POLICY}>Privacy Policy</Link>
+          <p>&copy; 2024 Kape Coffee - All rights reserved.</p>
         </div>
       </div>
     </footer>

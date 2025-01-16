@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Link } from "next-view-transitions";
 
 export default function InStoreMenu() {
   // TODO: hardcoded for now until we get real content
@@ -53,14 +52,10 @@ export default function InStoreMenu() {
           In Store Drinks
         </h2>
         <div className="flex flex-wrap gap-y-10">
-          {tempArray.map((drink) => {
+          {tempArray.map((drink, idx) => {
             return (
-              <Link
-                key={drink.src}
-                href={drink.href}
-                className="w-1/2 md:w-1/4"
-              >
-                <div className="relative px-[6px]">
+              <div key={idx} className="w-1/2 md:w-1/4">
+                <div className="relative px-[6px]" key={drink.src}>
                   <Image
                     src={drink.src}
                     alt=""
@@ -72,7 +67,7 @@ export default function InStoreMenu() {
                 <p className="mt-2 text-center text-xl font-bold text-kape-green">
                   {drink.name}
                 </p>
-              </Link>
+              </div>
             );
           })}
         </div>

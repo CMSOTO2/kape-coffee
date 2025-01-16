@@ -16,7 +16,15 @@ export default function Hero() {
           className="h-full w-full object-cover"
           aria-label="Coffee beans flying"
           playsInline
-        />
+        >
+          <track
+            // src="/captions/kape-hero-captions.vtt"
+            kind="captions"
+            srcLang="en"
+            label="English captions"
+            default
+          />
+        </video>
       </div>
     </section>
   );
