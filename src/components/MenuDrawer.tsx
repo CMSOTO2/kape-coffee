@@ -17,7 +17,7 @@ export function MenuDrawer() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" aria-label="Open navigation menu">
           <Menu className="h-8 w-8" />
         </Button>
       </DrawerTrigger>
