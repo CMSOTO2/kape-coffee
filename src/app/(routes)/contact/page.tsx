@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <CommonPageTemplate title="Contact">
-      <div className="relative mx-auto mt-10 h-[500px] w-[400px] overflow-hidden rounded-xl ">
+      <div className="relative mx-auto mt-10 aspect-video w-full overflow-hidden rounded-xl md:h-[500px] md:w-[400px]">
         <Image
           src="/contact-us.jpg"
           alt="Kape crew picture"
